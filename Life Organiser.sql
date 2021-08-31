@@ -88,16 +88,16 @@ CREATE TABLE Reading(
 -- INSERTING DATA INTO TABLES--
 -- I DID THESE VALUES BASED ON MY ACTUAL DAILY LIFE
 -- 1. inserting into Movies
-INSERT INTO  Movies(movieId, movieName, movieGenre, movieReleaseDate, tvSerieslangauge, whereToWatch) values (1, 'Sister Sister', 'American Sitcom', STR_TO_DATE('01,04,1994', '%d,%m,%Y'), 'English', 'Netflix');
-INSERT INTO  Movies(movieId, movieName, movieGenre, movieReleaseDate, tvSerieslangauge, whereToWatch) values (2, '', '', STR_TO_DATE('', '%d,%m,%Y'), '', '');
-INSERT INTO  Movies(movieId, movieName, movieGenre, movieReleaseDate, tvSerieslangauge, whereToWatch) values (3, '', '', STR_TO_DATE('', '%d,%m,%Y'), '', '');
-INSERT INTO  Movies(movieId, movieName, movieGenre, movieReleaseDate, tvSerieslangauge, whereToWatch) values (46, '', '', STR_TO_DATE('', '%d,%m,%Y'), '', '');
-INSERT INTO  Movies(movieId, movieName, movieGenre, movieReleaseDate, tvSerieslangauge, whereToWatch) values (30, '', '', STR_TO_DATE('', '%d,%m,%Y'), '', '');
-INSERT INTO  Movies(movieId, movieName, movieGenre, movieReleaseDate, tvSerieslangauge, whereToWatch) values (4, '', '', STR_TO_DATE('', '%d,%m,%Y'), '', '');
-INSERT INTO  Movies(movieId, movieName, movieGenre, movieReleaseDate, tvSerieslangauge, whereToWatch) values (8, '', '', STR_TO_DATE('', '%d,%m,%Y'), '', '');
-INSERT INTO  Movies(movieId, movieName, movieGenre, movieReleaseDate, tvSerieslangauge, whereToWatch) values (9, '', '', STR_TO_DATE('', '%d,%m,%Y'), '', '');
-INSERT INTO  Movies(movieId, movieName, movieGenre, movieReleaseDate, tvSerieslangauge, whereToWatch) values (6, '', '', STR_TO_DATE('', '%d,%m,%Y'), '', '');
-INSERT INTO  Movies(movieId, movieName, movieGenre, movieReleaseDate, tvSerieslangauge, whereToWatch) values (5, '', '', STR_TO_DATE('', '%d,%m,%Y'), '', '');
+INSERT INTO  Movies(movieId, movieName, movieGenre, movieReleaseDate, tvSerieslangauge, whereToWatch) values (1, 'Lion Heart', 'Drama', STR_TO_DATE('2018', '%Y'), 'English', 'Netflix');
+INSERT INTO  Movies(movieId, movieName, movieGenre, movieReleaseDate, tvSerieslangauge, whereToWatch) values (2, 'Train To Busan', 'Thriller', STR_TO_DATE('2016', '%Y'), 'Korean', 'DramaCool');
+INSERT INTO  Movies(movieId, movieName, movieGenre, movieReleaseDate, tvSerieslangauge, whereToWatch) values (3, 'Oceans 8', 'Action', STR_TO_DATE('2018', '%Y'), 'English', 'Netflix');
+INSERT INTO  Movies(movieId, movieName, movieGenre, movieReleaseDate, tvSerieslangauge, whereToWatch) values (46, 'Annie(2014)', 'Musical', STR_TO_DATE('2014', '%Y'), 'Engish', 'Netflix');
+INSERT INTO  Movies(movieId, movieName, movieGenre, movieReleaseDate, tvSerieslangauge, whereToWatch) values (30, 'A Werewolf Boy', 'Fantasy', STR_TO_DATE('2012', '%Y'), 'Korean', 'DramaCool');
+INSERT INTO  Movies(movieId, movieName, movieGenre, movieReleaseDate, tvSerieslangauge, whereToWatch) values (4, 'Miricle in Cell No 7', 'Social Issue', STR_TO_DATE('2019', '%Y'), 'Turkish', 'Netflix');
+INSERT INTO  Movies(movieId, movieName, movieGenre, movieReleaseDate, tvSerieslangauge, whereToWatch) values (8, 'IF BEALE STREET COULD TALK', 'Drama', STR_TO_DATE('2018', '%Y'), 'English', 'Hulu');
+INSERT INTO  Movies(movieId, movieName, movieGenre, movieReleaseDate, tvSerieslangauge, whereToWatch) values (9, 'A Fall from Grace', 'Thriller', STR_TO_DATE('2020', '%Y'), 'English', 'Netflix');
+INSERT INTO  Movies(movieId, movieName, movieGenre, movieReleaseDate, tvSerieslangauge, whereToWatch) values (6, 'Wonder', 'Drama', STR_TO_DATE('2017', '%Y'), 'English', 'Netflix');
+-- INSERT INTO  Movies(movieId, movieName, movieGenre, movieReleaseDate, tvSerieslangauge, whereToWatch) values (5, '', '', STR_TO_DATE('', '%Y'), '', ''); --
 
 -- 2. inserting into TVSeries
 INSERT INTO  TVSeries(tvSeriesId, tvSeriesName, tvSeriesgenre, tvSeriesReleaseDate, tvSerieslangauge, currentEpisode) values ('0', 'Sister Sister', 'American Sitcom', STR_TO_DATE('01,04,1994', '%d,%m,%Y'), 'English', 'S2E7');
@@ -152,7 +152,7 @@ INSERT INTO  YouTube(nameOfYouTubers, youtubeGenre, channelName) values ('Rhea E
 
 -- 5. inserting into Reading
 INSERT INTO  Reading(bookId, bookGenre, bookName, author) values ('1', 'Romance', 'The Time Traveler Wife', 'Audrey Niffenegger');
-INSERT INTO  Reading(bookId, bookGenre, bookName, author) values ('4', 'Fantasy', 'A Court of Thorns and Roses', 'Sarah J.Maas');
+INSERT INTO  Reading(bookId, bookGenre, bookName, author) values ('44', 'Fantasy', 'A Court of Thorns and Roses', 'Sarah J.Maas');
 INSERT INTO  Reading(bookId, bookGenre, bookName, author) values ('53', ' Manhwa', 'The Villioness is a Marionette', 'Han Yi Rim');
 INSERT INTO  Reading(bookId, bookGenre, bookName, author) values ('2', 'Young Adult', 'The Perks of Being a Wallflower', 'Stephen Chbosky');
 INSERT INTO  Reading(bookId, bookGenre, bookName, author) values ('4', 'Fantasy', 'City of Bones', 'Cassandra Clare');
@@ -161,7 +161,7 @@ INSERT INTO  Reading(bookId, bookGenre, bookName, author) values ('7', 'Anime', 
 INSERT INTO  Reading(bookId, bookGenre, bookName, author) values ('8', 'Triller', 'Gone Girl', 'Gillian Flynn');
 INSERT INTO  Reading(bookId, bookGenre, bookName, author) values ('9', 'Anime', 'Maid Sama!', 'Hiro Fujiwara');
 INSERT INTO  Reading(bookId, bookGenre, bookName, author) values ('04', 'Young Adult', 'The Hate U Give', 'Angie Thomas');
-INSERT INTO  Reading(bookId, bookGenre, bookName, author) values ('30', 'Young Adult', 'Children of Blood and Bone', 'Tomi Adeyemi');
+INSERT INTO  Reading(bookId, bookGenre, bookName, author) values ('40', 'Young Adult', 'Children of Blood and Bone', 'Tomi Adeyemi');
 INSERT INTO  Reading(bookId, bookGenre, bookName, author) values ('21', 'Manhwa', 'Shadow Queen', 'Hayol');
 --  INSERT INTO  YouTube(bookId, bookGenre, bookName, author) values ('', '', '', '');--
 
