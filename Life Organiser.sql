@@ -25,7 +25,7 @@ DROP TABLE Reading CASCADE;
 CREATE TABLE Movies (
 	movieId INTEGER NOT NULL,
     movieName VARCHAR(100) NOT NULL,
-    genre VARCHAR(100),
+    movieGenre VARCHAR(100),
     movieReleaseDate DATE,
     tvSerieslangauge VARCHAR(20) NOT NULL,
     whereToWatch VARCHAR(20),
@@ -38,7 +38,7 @@ CREATE TABLE TVSeries (
     tvSeriesgenre VARCHAR(100),
     tvSeriesReleaseDate DATE,
     tvSerieslangauge VARCHAR(20) NOT NULL,
-    currentEpisode INTEGER,
+    currentEpisode INTEGER, -- SHOULD I DO DEPENDING ON THE STATUS OF THE USERS E.G COMPLETED, PAUSED?
     
     CONSTRAINT TVSeries_pk PRIMARY KEY (tvSeriesId)
 );
@@ -48,7 +48,7 @@ CREATE TABLE Music (
     artist VARCHAR(100) NOT NULL,
     releaseDate DATE,
     musicGenre VARCHAR(100),
-    album VARCHAR(100),
+    albumName VARCHAR(100),
     
     CONSTRAINT Music_pk PRIMARY KEY (musicId)
 );
@@ -56,7 +56,7 @@ CREATE TABLE Music (
 CREATE TABLE YouTube(
 	nameOfYouTubers VARCHAR(100) NOT NULL,
     youtubeGenre VARCHAR(100),
-    channelName VARCHAR(300) NOT NULL, -- ALL THE CHANNEL NAME MUST BE DIFFERENT
+    channelName VARCHAR(300) NOT NULL, 
     
     CONSTRAINT YouTube_pk PRIMARY KEY (channelName)
 );
@@ -78,6 +78,66 @@ CREATE TABLE Reading(
 
 
 -- INSERTING DATA INTO TABLES--
+-- I DID THESE VALUES BASED ON MY ACTUAL DAILY LIFE
+-- 1. inserting into Movies
+INSERT INTO  Movies(movieId, movieName, movieGenre, movieReleaseDate, tvSerieslangauge, whereToWatch) values ();
+INSERT INTO  Movies(movieId, movieName, movieGenre, movieReleaseDate, tvSerieslangauge, whereToWatch) values ();
+INSERT INTO  Movies(movieId, movieName, movieGenre, movieReleaseDate, tvSerieslangauge, whereToWatch) values ();
+INSERT INTO  Movies(movieId, movieName, movieGenre, movieReleaseDate, tvSerieslangauge, whereToWatch) values ();
+INSERT INTO  Movies(movieId, movieName, movieGenre, movieReleaseDate, tvSerieslangauge, whereToWatch) values ();
+INSERT INTO  Movies(movieId, movieName, movieGenre, movieReleaseDate, tvSerieslangauge, whereToWatch) values ();
+INSERT INTO  Movies(movieId, movieName, movieGenre, movieReleaseDate, tvSerieslangauge, whereToWatch) values ();
+INSERT INTO  Movies(movieId, movieName, movieGenre, movieReleaseDate, tvSerieslangauge, whereToWatch) values ();
+INSERT INTO  Movies(movieId, movieName, movieGenre, movieReleaseDate, tvSerieslangauge, whereToWatch) values ();
+INSERT INTO  Movies(movieId, movieName, movieGenre, movieReleaseDate, tvSerieslangauge, whereToWatch) values ();
+
+-- 2. inserting into TVSeries
+INSERT INTO  TVSeries(tvSeriesId, tvSeriesgenre, tvSeriesReleaseDate, tvSerieslangauge, currentEpisode) values ();
+INSERT INTO  TVSeries(tvSeriesId, tvSeriesgenre, tvSeriesReleaseDate, tvSerieslangauge, currentEpisode) values ();
+INSERT INTO  TVSeries(tvSeriesId, tvSeriesgenre, tvSeriesReleaseDate, tvSerieslangauge, currentEpisode) values ();
+INSERT INTO  TVSeries(tvSeriesId, tvSeriesgenre, tvSeriesReleaseDate, tvSerieslangauge, currentEpisode) values ();
+INSERT INTO  TVSeries(tvSeriesId, tvSeriesgenre, tvSeriesReleaseDate, tvSerieslangauge, currentEpisode) values ();
+INSERT INTO  TVSeries(tvSeriesId, tvSeriesgenre, tvSeriesReleaseDate, tvSerieslangauge, currentEpisode) values ();
+INSERT INTO  TVSeries(tvSeriesId, tvSeriesgenre, tvSeriesReleaseDate, tvSerieslangauge, currentEpisode) values ();
+INSERT INTO  TVSeries(tvSeriesId, tvSeriesgenre, tvSeriesReleaseDate, tvSerieslangauge, currentEpisode) values ();
+INSERT INTO  TVSeries(tvSeriesId, tvSeriesgenre, tvSeriesReleaseDate, tvSerieslangauge, currentEpisode) values ();
+INSERT INTO  TVSeries(tvSeriesId, tvSeriesgenre, tvSeriesReleaseDate, tvSerieslangauge, currentEpisode) values ();
+
+-- 3. inserting into Music
+INSERT INTO  Music(musicId, artist, releaseDate, musicGenre, albumNam) values ();
+INSERT INTO  Music(musicId, artist, releaseDate, musicGenre, albumNam) values ();
+INSERT INTO  Music(musicId, artist, releaseDate, musicGenre, albumNam) values ();
+INSERT INTO  Music(musicId, artist, releaseDate, musicGenre, albumNam) values ();
+INSERT INTO  Music(musicId, artist, releaseDate, musicGenre, albumNam) values ();
+INSERT INTO  Music(musicId, artist, releaseDate, musicGenre, albumNam) values ();
+INSERT INTO  Music(musicId, artist, releaseDate, musicGenre, albumNam) values ();
+INSERT INTO  Music(musicId, artist, releaseDate, musicGenre, albumNam) values ();
+INSERT INTO  Music(musicId, artist, releaseDate, musicGenre, albumNam) values ();
+INSERT INTO  Music(musicId, artist, releaseDate, musicGenre, albumNam) values ();
+
+-- 4. inserting into YouTube
+INSERT INTO  YouTube(nameOfYouTubers, youtubeGenre, channelName) values ();
+INSERT INTO  YouTube(nameOfYouTubers, youtubeGenre, channelName) values ();
+INSERT INTO  YouTube(nameOfYouTubers, youtubeGenre, channelName) values ();
+INSERT INTO  YouTube(nameOfYouTubers, youtubeGenre, channelName) values ();
+INSERT INTO  YouTube(nameOfYouTubers, youtubeGenre, channelName) values ();
+INSERT INTO  YouTube(nameOfYouTubers, youtubeGenre, channelName) values ();
+INSERT INTO  YouTube(nameOfYouTubers, youtubeGenre, channelName) values ();
+INSERT INTO  YouTube(nameOfYouTubers, youtubeGenre, channelName) values ();
+INSERT INTO  YouTube(nameOfYouTubers, youtubeGenre, channelName) values ();
+INSERT INTO  YouTube(nameOfYouTubers, youtubeGenre, channelName) values ();
+
+-- 5. inserting into Reading
+INSERT INTO  Reading(bookId, bookGenre, bookName, currentChapter) values ();
+INSERT INTO  Reading(bookId, bookGenre, bookName, currentChapter) values ();
+INSERT INTO  Reading(bookId, bookGenre, bookName, currentChapter) values ();
+INSERT INTO  Reading(bookId, bookGenre, bookName, currentChapter) values ();
+INSERT INTO  Reading(bookId, bookGenre, bookName, currentChapter) values ();
+INSERT INTO  Reading(bookId, bookGenre, bookName, currentChapter) values ();
+INSERT INTO  Reading(bookId, bookGenre, bookName, currentChapter) values ();
+INSERT INTO  Reading(bookId, bookGenre, bookName, currentChapter) values ();
+INSERT INTO  Reading(bookId, bookGenre, bookName, currentChapter) values ();
+INSERT INTO  Reading(bookId, bookGenre, bookName, currentChapter) values ();
 
 
 -- THIS IS FOR THE MOVIE / TV SERIES TBALE
