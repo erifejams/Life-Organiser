@@ -13,6 +13,7 @@ CREATE DATABASE lifeOrganiser;
 
 -- DROPPING THE TABLES
 -- I DROPPED THESE TABLES SO WHEN I RUN THE PROGRAM AGAIN, IT WILL DELETE THE TABLES AND BE ABLE TO RUN IT SMOOTHLY 
+-- Don't need to include, if not changing or running the program more than once after changing something
 DROP TABLE Movies CASCADE;
 DROP TABLE TVSeries CASCADE;
 DROP TABLE Music CASCADE;
@@ -73,20 +74,15 @@ CREATE TABLE Reading(
     CONSTRAINT Reading_pk PRIMARY KEY (bookId)
 );
 
--- I'LL ADD THE CODING TABLE IF I HAVE TIME
-/*  CREATE TABLE Coding(
-
-);
- */
-
 -- I'LL ADD THE Podcast TABLE IF I HAVE TIME
 /*  CREATE TABLE Podcast(
 
 );
  */
+ 
 
 -- INSERTING DATA INTO TABLES--
--- I DID THESE VALUES BASED ON MY ACTUAL DAILY LIFE
+-- I DID THESE VALUES BASED ON MY ACTUAL DAILY LIFE e.g. got my music playlist from spotify
 -- 1. inserting into Movies
 INSERT INTO  Movies(movieId, movieName, movieGenre, movieReleaseDate, tvSerieslangauge, whereToWatch) values (1, 'Lion Heart', 'Drama', STR_TO_DATE('2018', '%Y'), 'English', 'Netflix');
 INSERT INTO  Movies(movieId, movieName, movieGenre, movieReleaseDate, tvSerieslangauge, whereToWatch) values (2, 'Train To Busan', 'Thriller', STR_TO_DATE('2016', '%Y'), 'Korean', 'DramaCool');
@@ -115,7 +111,7 @@ INSERT INTO  TVSeries(tvSeriesId, tvSeriesName, tvSeriesgenre, tvSeriesReleaseDa
 
 -- 3. inserting into Music
 INSERT INTO  Music(musicId, artist, nameOfSong, languageOfSong, releaseDate, musicGenre, albumName) values ('1', 'Ladipoe ft simi', 'Know You', 'Engish', STR_TO_DATE('2020', '%Y'), 'Afrobeat', 'Know You');
-INSERT INTO  Music(musicId, artist, nameOfSong, languageOfSong, releaseDate, musicGenre, albumName) values ('2', 'Vegedream', 'Ramenez la coupe a la maison', 'French', STR_TO_DATE('2018', '%Y'), ' Hip-Hop', 'Marchand de sable');
+INSERT INTO  Music(musicId, artist, nameOfSong, languageOfSong, releaseDate, musicGenre, albumName) values ('2', 'Vegedream', 'Ramenez la coupe a la maison', 'French', STR_TO_DATE('2018', '%Y'), 'Hip-Hop', 'Marchand de sable');
 INSERT INTO  Music(musicId, artist, nameOfSong, languageOfSong, releaseDate, musicGenre, albumName) values ('3', 'BTS', 'Black Swan', 'Korean', STR_TO_DATE('2020', '%Y'), 'Kpop', 'MAP OF THE SOUL: 7');
 INSERT INTO  Music(musicId, artist, nameOfSong, languageOfSong, releaseDate, musicGenre, albumName) values ('6', 'King Promise', 'Sisa', 'English', STR_TO_DATE('2019', '%Y'), 'Afrobeat', 'Sisa');
 INSERT INTO  Music(musicId, artist, nameOfSong, languageOfSong, releaseDate, musicGenre, albumName) values ('8', 'Fall Out Boy ft RM', 'Champion - Remix', 'English', STR_TO_DATE('2020', '%Y'), 'Alternative', 'Champion(Remix)');
@@ -129,7 +125,7 @@ INSERT INTO  Music(musicId, artist, nameOfSong, languageOfSong, releaseDate, mus
 INSERT INTO  YouTube(nameOfYouTubers, youtubeGenre, channelName) values ('Nella Rose', 'Entertainment', 'Nella Rose');
 INSERT INTO  YouTube(nameOfYouTubers, youtubeGenre, channelName) values ('Amina', 'Entertainment', 'This is Amina' );
 INSERT INTO  YouTube(nameOfYouTubers, youtubeGenre, channelName) values ('Murad Merali', 'Reviews', 'Murad Merali');
-INSERT INTO  YouTube(nameOfYouTubers, youtubeGenre, channelName) values ('HYBE LABELS', 'Music', 'HYBE LABELS');
+INSERT INTO  YouTube(nameOfYouTubers, youtubeGenre, channelName) values ('HYBE LABELS', 'Kpop', 'HYBE LABELS');
 INSERT INTO  YouTube(nameOfYouTubers, youtubeGenre, channelName) values ('Chizi Duru', 'Lifesyle', 'Chizi Duru');
 INSERT INTO  YouTube(nameOfYouTubers, youtubeGenre, channelName) values ('RG Entertainment', 'Hindu Movies', 'RG Entertainment');
 INSERT INTO  YouTube(nameOfYouTubers, youtubeGenre, channelName) values ('Adeola Patronne', 'Entertainment', 'Adeola Patronne');
@@ -144,7 +140,7 @@ INSERT INTO  YouTube(nameOfYouTubers, youtubeGenre, channelName) values ('MRLond
 INSERT INTO  YouTube(nameOfYouTubers, youtubeGenre, channelName) values ('Mariam Musa', 'Fashion, Beauty and Lifestyle', 'Mariam Musa');
 INSERT INTO  YouTube(nameOfYouTubers, youtubeGenre, channelName) values ('Bukola', 'Programming', 'Bukola');
 INSERT INTO  YouTube(nameOfYouTubers, youtubeGenre, channelName) values ('Paternity Court', 'Law', 'Paternity Court');
-INSERT INTO  YouTube(nameOfYouTubers, youtubeGenre, channelName) values ('GRM Daily', 'Music', 'GRM Daily');
+INSERT INTO  YouTube(nameOfYouTubers, youtubeGenre, channelName) values ('GRM Daily', 'Hip-Hop', 'GRM Daily');
 INSERT INTO  YouTube(nameOfYouTubers, youtubeGenre, channelName) values ('Viki Global TV', 'Asian Dramas', 'Viki Global TV');
 INSERT INTO  YouTube(nameOfYouTubers, youtubeGenre, channelName) values ('Rhea Ellen', 'Comedy', 'Rhea Ellen');
 --  INSERT INTO  YouTube(nameOfYouTubers, youtubeGenre, channelName) values ('', '', '');--
@@ -160,11 +156,13 @@ INSERT INTO  Reading(bookId, bookGenre, bookName, author) values ('6', 'Romance'
 INSERT INTO  Reading(bookId, bookGenre, bookName, author) values ('7', 'Anime', 'Haikyuu', 'Haruichi Furudate');
 INSERT INTO  Reading(bookId, bookGenre, bookName, author) values ('8', 'Triller', 'Gone Girl', 'Gillian Flynn');
 INSERT INTO  Reading(bookId, bookGenre, bookName, author) values ('9', 'Anime', 'Maid Sama!', 'Hiro Fujiwara');
-INSERT INTO  Reading(bookId, bookGenre, bookName, author) values ('04', 'Young Adult', 'The Hate U Give', 'Angie Thomas');
+INSERT INTO  Reading(bookId, bookGenre, bookName, author) values ('77', 'Young Adult', 'The Hate U Give', 'Angie Thomas');
 INSERT INTO  Reading(bookId, bookGenre, bookName, author) values ('40', 'Young Adult', 'Children of Blood and Bone', 'Tomi Adeyemi');
 INSERT INTO  Reading(bookId, bookGenre, bookName, author) values ('21', 'Manhwa', 'Shadow Queen', 'Hayol');
 --  INSERT INTO  YouTube(bookId, bookGenre, bookName, author) values ('', '', '', '');--
 
+
+-- SOME WANTED FEATURES IDEA
 -- THIS IS FOR THE MOVIE / TV SERIES TBALE
 -- Also want to check if it is the first episode or last episode
 	-- DROPPED--
